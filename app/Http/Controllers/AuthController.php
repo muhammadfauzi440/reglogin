@@ -16,13 +16,18 @@ class AuthController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:8|confirmed'
+            'password' => 'required|string|min:8|confirmed',
+            'nis' => 'required|numeric|unique:users',
+            'kelas' => 'required|string|max:50'
         ]);
 
         User::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => Hash::make($request->password)
+            'password' => Hash::make($request->password),
+            'nis' => $request->nis,
+            'kelas' => $request->kelas,
+            'role' => 'siswa'
         ]);
         
         return redirect()->route('login')->with('success', 'Registrasi Berhasil');
@@ -42,7 +47,12 @@ class AuthController extends Controller
         
         if(Auth::attempt($credentials)) {
             $request->session()->regenerate();
-            return redirect()->route('dashboard')->with('success', 'Login berhasil');
+
+            if (Auth::user()->role === 'admin') {
+                return redirect()->intended('/admin/dashboard');
+            }
+
+            return redirect()->intended('siswa/dashboard');
         }
 
         return back()->withErrors([

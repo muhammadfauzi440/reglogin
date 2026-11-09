@@ -12,14 +12,14 @@
 <body class="bg-light">
     <div class="container mt-5">
         <div class="card">
-            <div class="card-header">Dashboard</div>
+            <div class="card-header fw-bold">Dashboard <span class="text-warning">Admin</span></div>
             <div class="card-body">
                 @if (session('success'))
                     <div class="alert alert-success">
                         {{ session('success') }}
                     </div>
                 @endif
-                <h5>SELAMAT DATANG, {{ Auth::user()->name }}</h5>
+                <h5 class="fw-bold">SELAMAT DATANG, {{ Auth::user()->name }}</h5>
                 <p>Email: {{ Auth::user()->email }}</p>
                 <a href="{{ route('logout') }}"
                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn btn-danger"

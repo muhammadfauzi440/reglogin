@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\DashboardController;
 
 Route::get('/', function() {
     return view('welcome');
@@ -16,7 +17,7 @@ Route::post('/login', [AuthController::class, 'loginProcess'])->name('login.post
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::middleware('auth')->group(function() {
-    Route::get('/dashboard', function() {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/admin/dashboard', [DashboardController::class, 'adminDashboard'])->name('admin.dashboard');
+
+    Route::get('siswa/dashboard', [DashboardController::class, 'siswaDashboard'])->name('siswa.dashboard');
 });

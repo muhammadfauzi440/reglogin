@@ -74,6 +74,32 @@
                                 </div>
 
                                 <div class="cl-form-group">
+                                    <label for="nis">NIS</label>
+                                    <input
+                                        type="number"
+                                        class="cl-form-control"
+                                        placeholder="NIS Anda"
+                                        id="nis"
+                                        name="nis"
+                                        value="{{ old('nis') }}"
+                                        required
+                                    >
+                                </div>
+
+                                <div class="cl-form-group">
+                                    <label for="nis">Kelas</label>
+                                    <input
+                                        type="text"
+                                        class="cl-form-control"
+                                        placeholder="Contoh: XII RPL 2"
+                                        id="kelas"
+                                        name="kelas"
+                                        value="{{ old('kelas') }}"
+                                        required
+                                    >
+                                </div>
+
+                                <div class="cl-form-group">
                                     <label for="password">Password</label>
                                     <input
                                         type="password"
