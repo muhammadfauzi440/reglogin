@@ -1,37 +1,20 @@
-<!DOCTYPE html>
-<html lang="en">
+@extends('layouts.siswa')
 
-<head>
-    <title>Dashboard</title>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-</head>
-
-<body class="bg-light">
-    <div class="container mt-5">
-        <div class="card">
-            <div class="card-header fw-bold">Dashboard <span class="text-warning text-capitalize">{{ Auth::user()->role }}</span></div>
-            <div class="card-body">
-                @if (session('success'))
-                    <div class="alert alert-success">
-                        {{ session('success') }}
-                    </div>
-                @endif
-                <h5 class="fw-bold">SELAMAT DATANG, {{ Auth::user()->name }}</h5>
-                <p>Email: {{ Auth::user()->email }}</p>
-                <p>NIS: {{ Auth::user()->nis }}</p>
-                <p>Kelas: {{ Auth::user()->kelas }}</p>
-                <a href="{{ route('logout') }}"
-                onclick="event.preventDefault(); document.getElementById('logout-form').submit();" class="btn btn-danger"
-                >Logout</a>
-                <form action={{ route('logout') }} id="logout-form" method="POST" class="d-none">
-                    @csrf
-                </form>
-            </div>
+@section('content')
+<div class="container-fluid">
+    <div class="row mb-4">
+        <div class="col-12">
+            <h2 class="fw-bold">Dashboard Siswa</h2>
+            <p class="text-secondary">Selamat datang di portal layanan pengaduan sarana sekolah.</p>
         </div>
     </div>
-</body>
 
-</html>
+    <div class="card shadow-sm border-0 bg-primary text-white">
+        <div class="card-body p-4">
+            <h4>Punya keluhan atau masukan untuk sarana sekolah?</h4>
+            <p>Sampaikan aspirasimu sekarang juga agar fasilitas sekolah kita menjadi lebih baik.</p>
+            <a href="#" class="btn btn-light text-primary fw-bold mt-2">Buat Aspirasi Sekarang</a>
+        </div>
+    </div>
+</div>
+@endsection
