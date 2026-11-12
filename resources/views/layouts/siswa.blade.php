@@ -36,14 +36,14 @@
 
 <body class="d-flex vh-100">
 
-    <aside class="sidebar bg-dark text-white d-flex flex-column shadow">
+    <aside class="sidebar bg-primary text-white d-flex flex-column shadow">
 
         <div class="p-4 border-bottom border-light border-opacity-25 text-warning">
             <h5 class="fw-bold m-0 d-flex align-items-center gap-2">
                 <i class="bi bi-building"></i>
                 Pengaduan Sarana
             </h5>
-            <small class="text-light opacity-75">Siswa Panel</small>
+            <small class="text-light opacity-75">{{ Auth::user()->role }} Panel</small>
         </div>
 
         <nav class="grow p-3">
