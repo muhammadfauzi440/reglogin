@@ -49,26 +49,26 @@
         <nav class="grow p-3">
             <div class="nav flex-column">
 
-                <a href="/siswa/dashboard"
-                    class="nav-link d-flex align-items-center gap-2 py-2 px-3 mb-2 rounded text-light {{ request()->is('siswa/dashboard') ? 'active text-warning' : '' }}">
+                <a href="{{ route('siswa.dashboard') }}"
+                    class="nav-link d-flex align-items-center gap-2 py-2 px-3 mb-2 rounded text-light">
                     <i class="bi bi-house-door fs-5"></i>
                     Dashboard
                 </a>
 
-                <a href="/siswa/transaksi"
-                    class="nav-link d-flex align-items-center gap-2 py-2 px-3 mb-2 rounded text-light {{ request()->is('siswa/transaksi*') ? 'active text-warning' : '' }}">
+                <a href="{{ route('siswa.transaksi.create') }}"
+                    class="nav-link d-flex align-items-center gap-2 py-2 px-3 mb-2 rounded text-light">
                     <i class="bi bi-file-earmark-plus"></i>
                     Buat Aspirasi
                 </a>
 
-                <a href="/siswa/transaksi"
-                    class="nav-link d-flex align-items-center gap-2 py-2 px-3 mb-2 rounded text-light {{ request()->is('siswa/transaksi*') ? 'active text-warning' : '' }}">
+                <a href="{{ route('siswa.transaksi.index') }}"
+                    class="nav-link d-flex align-items-center gap-2 py-2 px-3 mb-2 rounded text-light">
                     <i class="bi bi-clock-history fs-5"></i>
                     Riwayat Aspirasi
                 </a>
 
-                <a href="/siswa/transaksi"
-                    class="nav-link d-flex align-items-center gap-2 py-2 px-3 mb-2 rounded text-light {{ request()->is('siswa/transaksi*') ? 'active text-warning' : '' }}">
+                <a href="/"
+                    class="nav-link d-flex align-items-center gap-2 py-2 px-3 mb-2 rounded text-light">
                     <i class="bi bi-chat-left-dots"></i>
                     Umpan Balik
                 </a>

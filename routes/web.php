@@ -18,7 +18,17 @@ Route::post('/login', [AuthController::class, 'loginProcess'])->name('login.post
 Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
 
 Route::middleware('auth')->group(function() {
-    Route::get('/admin/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+    Route::prefix('admin')->group(function() {
+        Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin.dashboard');
+        Route::get('/transaksi', [AdminController::class, 'index'])->name('admin.transaksi.index');
+        Route::get('/transaksi/{id}', [AdminController::class, 'show'])->name('admin.transaksi.show');
+        Route::get('/transaksi/{id}/edit', [AdminController::class, 'edit'])->name('admin.transaksi.edit');
+    });
 
-    Route::get('siswa/dashboard', [SiswaController::class, 'dashboard'])->name('siswa.dashboard');
+    Route::prefix('siswa')->group(function() {
+        Route::get('/dashboard', [SiswaController::class, 'dashboard'])->name('siswa.dashboard');
+        Route::get('/transaksi', [SiswaController::class, 'index'])->name('siswa.transaksi.index');
+        Route::get('/transaksi/create', [SiswaController::class, 'create'])->name('siswa.transaksi.create');
+        Route::get('/transaksi/{id}', [SiswaController::class, 'show'])->name('siswa.transaksi.show');
+    });
 });

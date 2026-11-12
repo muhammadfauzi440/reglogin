@@ -49,26 +49,26 @@
         <nav class="grow p-3">
             <div class="nav flex-column">
 
-                <a href="/admin/dashboard"
-                    class="nav-link d-flex align-items-center gap-2 py-2 px-3 mb-2 rounded text-light {{ request()->is('admin/dashboard') ? 'active text-warning' : '' }}">
+                <a href="{{ route('admin.dashboard') }}"
+                    class="nav-link d-flex align-items-center gap-2 py-2 px-3 mb-2 rounded text-light">
                     <i class="bi bi-house-door fs-5"></i>
                     Dashboard
                 </a>
 
-                <a href="/admin/transaksi"
-                    class="nav-link d-flex align-items-center gap-2 py-2 px-3 mb-2 rounded text-light {{ request()->is('admin/transaksi*') ? 'active text-warning' : '' }}">
+                <a href="{{ route('admin.transaksi.index') }}"
+                    class="nav-link d-flex align-items-center gap-2 py-2 px-3 mb-2 rounded text-light">
                     <i class="bi bi-clipboard-data fs-5"></i>
                     Data Aspirasi
                 </a>
 
                 <a href="/admin/transaksi"
-                    class="nav-link d-flex align-items-center gap-2 py-2 px-3 mb-2 rounded text-light {{ request()->is('admin/transaksi*') ? 'active text-warning' : '' }}">
+                    class="nav-link d-flex align-items-center gap-2 py-2 px-3 mb-2 rounded text-light">
                     <i class="bi bi-tags"></i>
                     Kelola Kategori
                 </a>
 
                 <a href="/admin/transaksi"
-                    class="nav-link d-flex align-items-center gap-2 py-2 px-3 mb-2 rounded text-light {{ request()->is('admin/transaksi*') ? 'active text-warning' : '' }}">
+                    class="nav-link d-flex align-items-center gap-2 py-2 px-3 mb-2 rounded text-light">
                     <i class="bi bi-chat-left-dots"></i>
                     Umpan Balik
                 </a>
