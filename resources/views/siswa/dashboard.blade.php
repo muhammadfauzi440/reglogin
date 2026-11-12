@@ -13,7 +13,7 @@
         <div class="card-body p-4">
             <h4>Punya keluhan atau masukan untuk sarana sekolah?</h4>
             <p>Sampaikan aspirasimu sekarang juga agar fasilitas sekolah kita menjadi lebih baik.</p>
-            <a href="" class="btn btn-light text-primary fw-bold mt-2">Buat Aspirasi Sekarang</a>
+            <a href="{{ route('siswa.transaksi.create') }}" class="btn btn-light text-primary fw-bold mt-2">Buat Aspirasi Sekarang</a>
         </div>
     </div>
 </div>
