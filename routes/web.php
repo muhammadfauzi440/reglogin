@@ -23,6 +23,8 @@ Route::middleware(['auth', 'role:admin'])->group(function() {
         Route::get('/transaksi', [AdminController::class, 'index'])->name('admin.transaksi.index');
         Route::get('/transaksi/{id}', [AdminController::class, 'show'])->name('admin.transaksi.show');
         Route::get('/transaksi/{id}/edit', [AdminController::class, 'edit'])->name('admin.transaksi.edit');
+        Route::get('/category', [AdminController::class, 'category'])->name('admin.category.index');
+        Route::get('/feedback', [AdminController::class, 'feedback'])->name('admin.feedback.index');
     });
 });
 
@@ -32,5 +34,7 @@ Route::middleware(['auth', 'role:siswa'])->group(function() {
         Route::get('/transaksi', [SiswaController::class, 'index'])->name('siswa.transaksi.index');
         Route::get('/transaksi/create', [SiswaController::class, 'create'])->name('siswa.transaksi.create');
         Route::get('/transaksi/{id}', [SiswaController::class, 'show'])->name('siswa.transaksi.show');
+        Route::get('/transaksi/{id}/edit', [SiswaController::class, 'edit'])->name('siswa.transaksi.edit');
+        Route::get('/feedback', [SiswaController::class, 'feedback'])->name('siswa.feedback.index');
     });
 });

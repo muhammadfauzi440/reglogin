@@ -21,4 +21,12 @@ class AdminController extends Controller
     public function show($id) {
         return view('admin.transaksi.show');
     }
+
+    public function category() {
+        return view('admin.category.index');
+    }
+
+    public function feedback() {
+        return view('admin.feedback.index');
+    }
 }

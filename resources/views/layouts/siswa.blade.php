@@ -67,7 +67,7 @@
                     Riwayat Aspirasi
                 </a>
 
-                <a href="/"
+                <a href="{{ route('siswa.feedback.index') }}"
                     class="nav-link d-flex align-items-center gap-2 py-2 px-3 mb-2 rounded text-light">
                     <i class="bi bi-chat-left-dots"></i>
                     Umpan Balik
