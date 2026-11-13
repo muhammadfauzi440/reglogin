@@ -31,6 +31,7 @@
                                 <th scope="col" class="py-3 text-nowrap">Judul Laporan</th>
                                 <th scope="col" class="py-3 text-nowrap">Kategori</th>
                                 <th scope="col" class="py-3 text-nowrap">Deskripsi</th>
+                                <th scope="col" class="py-3 text-nowrap">Bukti Foto</th>
                                 <th scope="col" class="py-3 text-nowrap">Status</th>
                                 <th scope="col" class="py-3 px-4 text-center text-nowrap" width="15%">Aksi</th>
                             </tr>
@@ -43,6 +44,13 @@
                                     <td class="fw-semibold">{{ $transaksi->transaction }}</td>
                                     <td>{{ $transaksi->category }}</td>
                                     <td>{{ $transaksi->desc }}</td>
+                                    <td>
+                                        @if ($transaksi->photo)
+                                            <img src="{{ asset('storage/' . $transaksi->photo) }}" alt="Foto Laporan" width="100" class="img-thumbnail">
+                                        @else
+                                            <span class="text-muted">Tidak ada photo</span>
+                                        @endif
+                                    </td>
                                     <td>
                                         @if($transaksi->status == 'waiting')
                                             <span class="badge bg-warning text-dark"><i class="bi bi-hourglass-split me-1"></i>Menunggu</span>
