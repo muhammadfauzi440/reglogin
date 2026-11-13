@@ -43,7 +43,7 @@
                 <i class="bi bi-building"></i>
                 Pengaduan Sarana
             </h5>
-            <small class="text-light opacity-75">{{ Auth::user()->role }} Panel</small>
+            <small class="text-light opacity-75"><span class="text-capitalize">{{ Auth::user()->role }} </span>Panel</small>
         </div>
 
         <nav class="grow p-3">
@@ -80,7 +80,7 @@
 
             <a href="{{ route('logout') }}"
                 onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
-                class="nav-link logout-link d-flex align-items-center gap-2 py-2 px-3 rounded text-white mb-0">
+                class="nav-link logout-link d-flex align-items-center gap-2 py-2 px-3 rounded text-danger mb-0">
                 <i class="bi bi-box-arrow-left fs-5"></i>
                 Logout
             </a>

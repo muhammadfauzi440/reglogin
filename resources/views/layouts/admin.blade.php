@@ -43,7 +43,7 @@
                 <i class="bi bi-building"></i>
                 Pengaduan Sarana
             </h5>
-            <small class="text-light opacity-75">{{ Auth::user()->role }} Panel</small>
+            <small class="text-light opacity-75"><span class="text-capitalize">{{ Auth::user()->role }} </span>Panel</small>
         </div>
 
         <nav class="grow p-3">
