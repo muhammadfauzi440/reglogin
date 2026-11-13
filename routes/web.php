@@ -34,8 +34,10 @@ Route::middleware(['auth', 'role:siswa'])->group(function() {
         Route::get('/transaksi', [SiswaController::class, 'index'])->name('siswa.transaksi.index');
         Route::get('/transaksi/create', [SiswaController::class, 'create'])->name('siswa.transaksi.create');
         Route::post('/transaksi/create', [SiswaController::class, 'store'])->name('siswa.transaksi.store');
+        Route::delete('/transaksi/delete/{id}', [SiswaController::class, 'destroy'])->name('siswa.transaksi.destroy');
         Route::get('/transaksi/{id}', [SiswaController::class, 'show'])->name('siswa.transaksi.show');
         Route::get('/transaksi/{id}/edit', [SiswaController::class, 'edit'])->name('siswa.transaksi.edit');
+        Route::put('/transaksi/{id}/', [SiswaController::class, 'update'])->name('siswa.transaksi.update');
         Route::get('/feedback', [SiswaController::class, 'feedback'])->name('siswa.feedback.index');
     });
 });

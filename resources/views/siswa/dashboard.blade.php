@@ -4,7 +4,7 @@
 <div class="container-fluid">
     <div class="row mb-4">
         <div class="col-12">
-            <h2 class="fw-bold">Dashboard {{ Auth::user()->role }}</h2>
+            <h2 class="fw-bold">Dashboard <span class=" text-capitalize text-warning">{{ Auth::user()->role }}</span></h2>
             <p class="text-secondary">Selamat datang di portal layanan pengaduan sarana sekolah.</p>
         </div>
     </div>
