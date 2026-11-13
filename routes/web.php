@@ -23,6 +23,8 @@ Route::middleware(['auth', 'role:admin'])->group(function() {
         Route::get('/transaksi', [AdminController::class, 'index'])->name('admin.transaksi.index');
         Route::get('/transaksi/{id}', [AdminController::class, 'show'])->name('admin.transaksi.show');
         Route::get('/transaksi/{id}/edit', [AdminController::class, 'edit'])->name('admin.transaksi.edit');
+        Route::put('/transaksi/{id}/', [AdminController::class, 'update'])->name('admin.transaksi.update');
+        Route::delete('/transaksi/delete/{id}', [AdminController::class, 'destroy'])->name('admin.transaksi.destroy');
         Route::get('/category', [AdminController::class, 'category'])->name('admin.category.index');
         Route::get('/feedback', [AdminController::class, 'feedback'])->name('admin.feedback.index');
     });
