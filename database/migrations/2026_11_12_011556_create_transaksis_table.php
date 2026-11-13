@@ -19,7 +19,7 @@ return new class extends Migration
             $table->text('desc');
             $table->string('photo');
             $table->enum('status', ['waiting', 'in_progress', 'done', 'rejected'])->default('waiting');
-            $table->text('response');
+            $table->text('response')->nullable();
             $table->timestamps();
         });
     }
