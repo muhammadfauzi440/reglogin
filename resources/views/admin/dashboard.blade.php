@@ -14,7 +14,7 @@
                 <div class="card bg-primary text-white shadow-sm border-0 h-100 w">
                     <div class="card-body">
                         <h5 class="card-title text-nowrap">Aspirasi</h5>
-                        <h2 class="mb-0">0</h2>
+                        <h2 class="mb-0">{{ $transaksiWait }}</h2>
                     </div>
                 </div>
             </div>
@@ -23,7 +23,7 @@
                 <div class="card bg-warning text-dark shadow-sm border-0 h-100">
                     <div class="card-body">
                         <h5 class="card-title text-nowrap">Proses</h5>
-                        <h2 class="mb-0">0</h2>
+                        <h2 class="mb-0">{{ $transaksiProgress }}</h2>
                     </div>
                 </div>
             </div>
@@ -32,7 +32,7 @@
                 <div class="card bg-success text-white shadow-sm border-0 h-100">
                     <div class="card-body">
                         <h5 class="card-title text-nowrap">Selesai</h5>
-                        <h2 class="mb-0">0</h2>
+                        <h2 class="mb-0">{{ $transaksiDone }}</h2>
                     </div>
                 </div>
             </div>
@@ -41,7 +41,7 @@
                 <div class="card bg-danger text-white shadow-sm border-0 h-100">
                     <div class="card-body">
                         <h5 class="card-title text-nowrap">Ditolak</h5>
-                        <h2 class="mb-0">0</h2>
+                        <h2 class="mb-0">{{ $transaksiReject }}</h2>
                     </div>
                 </div>
             </div>

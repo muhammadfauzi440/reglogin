@@ -85,7 +85,7 @@
                                 </tr>
                             @empty
                                 <tr>
-                                    <td colspan="6" class="text-center py-5 text-muted">
+                                    <td colspan="8" class="text-center py-5 text-muted">
                                         <i class="bi bi-inbox fs-1 d-block mb-3"></i>
                                         Anda belum memiliki riwayat laporan.<br>
                                         Silakan klik tombol <b>"Buat Laporan Baru"</b> untuk mengirim aspirasi.

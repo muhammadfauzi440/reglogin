@@ -12,7 +12,12 @@ class AdminController extends Controller
 {
     public function dashboard()
     {
-        return view('admin.dashboard');
+        $transaksiWait = Transaksi::where('status', 'waiting')->count();
+        $transaksiProgress = Transaksi::where('status', 'in_progress')->count();
+        $transaksiDone = Transaksi::where('status', 'done')->count();
+        $transaksiReject = Transaksi::where('status', 'rejected')->count();
+
+        return view('admin.dashboard', compact(['transaksiWait', 'transaksiProgress', 'transaksiDone', 'transaksiReject']));
     }
 
     public function index()
